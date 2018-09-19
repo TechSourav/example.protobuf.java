@@ -1,0 +1,11 @@
+syntax = "proto3";
+
+package example.simple;
+
+message SimpleMessage{
+
+  int32 count = 1;
+  string message = 2;
+  repeated int32 sample_list = 3;
+
+}

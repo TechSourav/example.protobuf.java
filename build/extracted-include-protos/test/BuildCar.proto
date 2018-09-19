@@ -1,0 +1,33 @@
+syntax = "proto3";
+
+package build.car;
+
+option java_package = "com.sourav.protobuf.examples";
+option java_outer_classname = "BuildComplexCar";
+
+message BuildCar{
+
+    int32 registrationNumber=1;
+    string cardModel=2;
+    Company car_company =3;
+    Accessories one_accessory =4;
+    repeated Accessories multiple_accessories =5;
+}
+
+enum Company{
+    UNKNOWN =0;
+    MARUTI =1;
+    HONDA=2;
+    HYUNDAI=3;
+    AUDI=4;
+    BMW=5;
+    VOLKSWAGAN=6;
+}
+
+message Accessories{
+
+    bool has_Wiper=1;
+    int32 bootSpace=2;
+    int32 legSpace=3;
+    string glovBoxType=4;
+}

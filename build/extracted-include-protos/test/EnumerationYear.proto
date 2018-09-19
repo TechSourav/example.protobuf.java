@@ -1,0 +1,21 @@
+syntax = "proto3";
+
+package enumeration.year;
+
+message EnumCricketMatch{
+
+    int32 num=1;
+    string teamName=2;
+    GameSchedule game_schedule =3;
+
+}
+
+enum GameSchedule{
+    UNKNOWN =0;
+    JAN =1;
+    MAR=2;
+    APRIL=3;
+    JUN=4;
+    NOV=5;
+    DEC=6;
+}
