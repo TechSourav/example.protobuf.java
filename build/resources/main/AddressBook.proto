@@ -7,7 +7,7 @@ import "google/protobuf/timestamp.proto";
 // [START java_declaration]
 option java_package = "com.sourav.protobuf.addressBook";
 option java_outer_classname = "AddressBookProtos";
-option java_multiple_files = true;
+option java_multiple_files = true;  // This is to generate dedicated calsses and interafces for the proto
 // [END java_declaration]
 
 // [START csharp_declaration]

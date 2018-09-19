@@ -29,7 +29,7 @@ public class MyAddressBookMain {
         // Create PersonBuilder with Phone Number details
         PersonBuilder.setName("Sourav Kundu")
                 .setId(353525)
-                .setEmail("sourav.kundu@xyz.com")
+                .setEmail("sourav6.k@gmail.com")
                 .addAllPhones(Arrays.asList(phNumBuilder1.build(), phNumBuilder2.build()));
         // Add the details to address book
         AddressBook.Builder addressBookBuilder = AddressBook.newBuilder();
@@ -59,7 +59,7 @@ public class MyAddressBookMain {
     private static void writeToAndReadFromFile(AddressBook.Builder addressBookBuilder) {
         // Write all the details to File
         try {
-            FileOutputStream fos = new FileOutputStream("MyAddressBook.bin");
+            FileOutputStream fos = new FileOutputStream("MyAddressBook.txt");
             addressBookBuilder.build().writeTo(fos);
             fos.close();
         } catch (FileNotFoundException e) {
@@ -70,7 +70,7 @@ public class MyAddressBookMain {
 
         // Read all the details from File
         try {
-            FileInputStream fis = new FileInputStream("MyAddressBook.bin");
+            FileInputStream fis = new FileInputStream("MyAddressBook.txt");
             AddressBook addressDetails = AddressBook.parseFrom(fis);
             System.out.println(addressDetails);
             fis.close();
